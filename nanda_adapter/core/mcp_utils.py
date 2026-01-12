@@ -38,7 +38,7 @@ class MCPClient:
     def __init__(self):
         self.session = None
         self.exit_stack = AsyncExitStack()
-        ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY") or "your-key"
+        ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
         self.anthropic = Anthropic(api_key=ANTHROPIC_API_KEY)
 
     async def connect_to_mcp_and_get_tools(self, mcp_server_url, transport_type="http"):

@@ -20,7 +20,7 @@ import sys
 sys.stdout.reconfigure(line_buffering=True)
 
 # Set API key through environment variable or directly in the code
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY") or "your key"
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 
 # Toggle for message improvement feature
 IMPROVE_MESSAGES = os.getenv("IMPROVE_MESSAGES", "true").lower() in ("true", "1", "yes", "y")
@@ -58,7 +58,7 @@ IMPROVE_MESSAGE_PROMPTS = {
     "default": "Improve the following message to make it more clear, compelling, and professional without changing the core content or adding fictional information. Keep the same overall meaning but enhance the phrasing and structure. Don't make it too verbose - keep it concise but impactful. Return only the improved message without explanations or introductions."
 }
 
-SMITHERY_API_KEY = os.getenv("SMITHERY_API_KEY") or "bfcb8cec-9d56-4957-8156-bced0bfca532"
+SMITHERY_API_KEY = os.getenv("SMITHERY_API_KEY")
 
 def get_registry_url():
     """Get the registry URL from file or use default"""

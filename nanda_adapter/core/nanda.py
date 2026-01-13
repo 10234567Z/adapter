@@ -18,14 +18,14 @@ import threading
 try:
     from .agent_bridge import *
     from . import run_ui_agent_https
-    from .llm_providers import init_provider, get_provider
+    from .llm_providers import init_provider
 except ImportError:
     # If running from parent directory, add current directory to path
     current_dir = os.path.dirname(os.path.abspath(__file__))
     sys.path.insert(0, current_dir)
     from agent_bridge import *
     import run_ui_agent_https
-    from llm_providers import init_provider, get_provider
+    from llm_providers import init_provider
 
 class NANDA:
     """NANDA class to create agent_bridge with custom improvement logic"""
